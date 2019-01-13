@@ -5,4 +5,5 @@ name = "choco_sable"
 version = "0.1.0"
 [dependencies]
 clap = "*"
+dialoguer = "*"
 git2 = "*"
