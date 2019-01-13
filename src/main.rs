@@ -1,5 +1,6 @@
 mod remove;
 mod switch;
+mod util;
 
 use clap::*;
 
