@@ -1,40 +1,19 @@
-use clap::*;
-use dialoguer::*;
-use git2::*;
+use crate::util::*;
+use std::process::Command;
 
-pub fn exec(matches: &ArgMatches) {
-    // fetch local repository branches
+pub fn exec() {
     let branches = fetch_branches();
+    let selection_branch = get_selection_branch(&branches);
 
-    // output to stdout select branch
-    let selection_branch = get_selection_branch(branches);
-type Branches = Vec<String>;
-type BranchName = String;
-
-fn fetch_branches() -> Branches {
-    let repo = Repository::open(".").expect("failed: open repository");
-
-    let mut branches = Vec::new();
-
-    let filter = None;
-    for branch in repo.branches(filter).expect("failed: fetch branches") {
-        let (branch, _) = branch.unwrap();
-
-        // Result<Option<String>という構造になっている
-        // unwrap().unwrap() するのも分かりづらいのでifで剥がす
-        let name = if let Ok(Some(name)) = branch.name() {
-            name
-        } else {
-            panic!("failed")
-        };
-
-        branches.push(name.to_string())
-
-    }
-
-    branches
+    checkout(&selection_branch);
 }
 
-    // git checkout select_branch
-    checkout(selection_branch);
+fn checkout(branch: &BranchName) {
+    let mut editor_process = Command::new("git")
+        .arg("checkout")
+        .arg(branch)
+        .spawn()
+        .unwrap();
+
+    editor_process.wait().unwrap();
 }
