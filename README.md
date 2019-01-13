@@ -1,5 +1,6 @@
 # GBranch
 Tools to make 'git branch' and 'git checkout' useful
+
 This is the transition of Go to Rust
 https://github.com/ponday-dev/git-plugin-choosable
 
