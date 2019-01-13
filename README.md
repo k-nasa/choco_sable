@@ -1,3 +1,5 @@
+[![crate-name at crates.io](https://img.shields.io/crates/v/gbranch.svg)](https://crates.io/crates/gbranch)
+
 # GBranch
 Tools to make 'git branch' and 'git checkout' useful
 
