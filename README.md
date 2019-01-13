@@ -7,6 +7,9 @@ cargo install gbranch
 ```
 
 ## Usage
+
+<a href="https://asciinema.org/a/cblnHRTOK5TShJt1Qp1K8ynt6" target="_blank"><img src="https://asciinema.org/a/cblnHRTOK5TShJt1Qp1K8ynt6.svg" /></a>
+
 ```
 gbranch 0.1.0
 Tools to make 'git branch' and 'git checkout' useful
