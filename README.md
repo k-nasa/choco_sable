@@ -1,5 +1,7 @@
 # GBranch
 Tools to make 'git branch' and 'git checkout' useful
+This is the transition of Go to Rust
+https://github.com/ponday-dev/git-plugin-choosable
 
 ## Installation
 ```
@@ -13,9 +15,6 @@ cargo install gbranch
 ```
 gbranch 0.1.0
 Tools to make 'git branch' and 'git checkout' useful
-
-This is the transition of Go to Rust
-https://github.com/ponday-dev/git-plugin-choosable
 
 USAGE:
     gbranch [SUBCOMMAND]
