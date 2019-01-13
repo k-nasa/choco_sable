@@ -1,9 +1,14 @@
 [package]
 authors = ["nasa <htilcs1115@gmail.com>"]
 edition = "2018"
-name = "choco_sable"
+name = "gbranch"
 version = "0.1.0"
+license-file = "LICENSE"
+readme = "README.md"
+description = "Tools to make 'git branch' and 'git checkout' useful"
+keywords = ["cli"]
+
 [dependencies]
-clap = "*"
-dialoguer = "*"
-git2 = "*"
+clap = "2.32"
+dialoguer = "0.3.0"
+git2 = "0.7"
