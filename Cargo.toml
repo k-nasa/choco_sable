@@ -1,7 +1,8 @@
 [package]
-name = "choco_sable"
-version = "0.1.0"
 authors = ["nasa <htilcs1115@gmail.com>"]
 edition = "2018"
-
+name = "choco_sable"
+version = "0.1.0"
 [dependencies]
+clap = "*"
+git2 = "*"
